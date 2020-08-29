@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+/* even amount of space between grid items */
+  justify-content: space-evenly;
+/* align items to center of grid area */
+  align-items: center;
+}
+
+.time-select, .sound-picker, .player-container {
+  height: 80%;
+/* all item has same width and height */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.player-container {
+  position: relative;
+}
+
+.player-container svg {
+  position: absolute;
+/* the folowing places circle in middle of container */
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+/*  target of pointer events */
+  pointer-events: none;
+}
+
+.time-display {
+  position: absolute;
+  font-size: 50px;
+  color: white;
+  bottom: 10%;
+}
+
+video {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+/* placed underneath all */
+  z-index: -1;
+}
+
+.time-select button,
+.sound-picker button {
+  color: white;
+  width: 30%;
+  height: 10%;
+  background: none;
+  border: 2px solid white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 20px;
+  transition: all 0.5s ease;
+}
+
+.time-select button:hover {
+  color: black;
+  background: white;
+}
+
+.sound-picker button {
+  border: none;
+  height: 120px;
+  width: 120px;
+  border-radius: 70%;
+  padding: 30px;
+}
+/* colours for sound buttons */
+.sound-picker button:nth-child(1) {
+  background: darkblue;
+}
+
+.sound-picker button:nth-child(2) {
+  background: darkorange;
+}
+
+.sound-picker button:nth-child(3) {
+  background: darkgreen;
+}
+
+/* keep image within button */
+.sound-picker button img {
+  height: 50%;
+}

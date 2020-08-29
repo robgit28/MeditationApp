@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <html lang=”en”>
+    <meta charset=”UTF-8”>
+    <title>Meditation App Project</title>
+    <link rel="stylesheet" type="text/css" href="styles/reset.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="app">
+      <div class="vid-container">
+<!-- default sound & video -->
+        <video loop>
+          <source src="./video/rain.mp4" type="video/mp4">
+        </video>
+      </div>
+<!-- time selection buttons -->
+      <div class="time-select">
+        <button data-time="120">2 minutes</button>
+        <button data-time="300">5 minutes</button>
+        <button data-time="600">10 minutes</button>
+      </div>
+<!-- play button & timer -->
+      <div class="player-container">
+<!-- sound picker -->
+        <audio class="song">     
+<!-- rain sound -->
+          <source src="./sounds/rain.mp3">
+        </audio>
+<!-- play button icon -->
+        <img src="./svg/play.svg" alt="play" class="play"/>
+        <svg class="track-outline"
+          width="453"
+          height="453"
+          viewBox="0 0 453 453"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+        <circle
+          cx="226.5"
+          cy="226.5" r="216.5"
+          stroke="white"
+          stroke-width="20"/>
+        </svg>
+        <svg class="moving-outline"
+          width="453"
+          height="453"
+          viewBox="0 0 453 453"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+        <circle
+          cx="226.5"
+          cy="226.5"
+          r="216.5"
+          stroke="#018EBA"
+          stroke-width="20"/>
+        </svg>
+<!-- timer display -->
+        <h3 class="time-display"></h3>
+    </div>
+<!-- pick sounds -->
+        <div class="sound-picker">
+<!-- rain sound & video -->
+          <button data-sound="./sounds/rain.mp3" data-video="./video/rain.mp4">
+<!-- rain icon -->
+            <img src="./svg/rain.svg" class="rain" alt="rain">
+          </button>
+<!-- beach sound & video -->
+          <button data-sound="./sounds/beach.mp3" data-video="./video/beach.mp4">
+<!-- beach icon -->
+            <img src="./svg/beach.svg" alt="beach">
+          </button>
+<!-- tree sound & video -->
+          <button data-sound="./sounds/tree.mp3" loop data-video="./video/tree.mp4">
+<!-- tree icon -->
+            <img src="./svg/tree.svg" class="tree" alt="tree">
+          </button>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
